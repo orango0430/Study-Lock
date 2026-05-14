@@ -1,14 +1,12 @@
-package Service;
+package org.example.study_lock.Service;
 
-import Repository.UserRepository;
-import dto.LoginResponse;
+import org.example.study_lock.Repository.UserRepository;
+import org.example.study_lock.dto.LoginResponse;
 import lombok.RequiredArgsConstructor;
-import Config.JWTutil;
-import Entity.User;
-import Repository.UserRepository;
-import dto.LoginRequest;
-import dto.LoginResponse;
-import dto.SignupRequest;
+import org.example.study_lock.Config.JWTutil;
+import org.example.study_lock.Entity.User;
+import org.example.study_lock.dto.LoginRequest;
+import org.example.study_lock.dto.SignupRequest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

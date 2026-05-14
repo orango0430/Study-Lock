@@ -1,6 +1,6 @@
-package Repository;
+package org.example.study_lock.Repository;
 
-import Entity.User;
+import org.example.study_lock.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

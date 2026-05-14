@@ -1,11 +1,10 @@
-package Controller;
+package org.example.study_lock.Controller;
 
-import Service.AuthService;
+import org.example.study_lock.Service.AuthService;
 import lombok.RequiredArgsConstructor;
-import Service.AuthService;
-import dto.LoginRequest;
-import dto.LoginResponse;
-import dto.SignupRequest;
+import org.example.study_lock.dto.LoginRequest;
+import org.example.study_lock.dto.LoginResponse;
+import org.example.study_lock.dto.SignupRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

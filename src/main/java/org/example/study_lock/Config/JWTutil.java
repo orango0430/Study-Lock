@@ -1,4 +1,4 @@
-package Config;
+package org.example.study_lock.Config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
