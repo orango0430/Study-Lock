@@ -1,4 +1,4 @@
-package Entity;
+package org.example.study_lock.Entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

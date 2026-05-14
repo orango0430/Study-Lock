@@ -1,4 +1,4 @@
-package dto;
+package org.example.study_lock.dto;
 import lombok.Getter;
 
 @Getter

@@ -1,4 +1,4 @@
-package Config;
+package org.example.study_lock.Config;
 
 import org.jspecify.annotations.NonNull;
 import org.springframework.context.annotation.Bean;
