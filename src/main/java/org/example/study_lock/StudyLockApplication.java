@@ -1,4 +1,4 @@
-package org.exaple.study_lock;
+package org.example.study_lock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
