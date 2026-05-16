@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
@@ -12,7 +13,8 @@ import java.util.Date;
 @Component
 public class JWTutil {
 
-    private final String secretKey = "studylock-secret-key-must-be-at-least-256-bits-long";
+    @Value("${jwt.secret}")
+    private String secretKey ;
     private final long ACCESS_TOKEN_EXPIRE = 1000 * 60 * 60;           // 1시간
     private final long REFRESH_TOKEN_EXPIRE = 1000 * 60 * 60 * 24 * 7; // 7일
 
