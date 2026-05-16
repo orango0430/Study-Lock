@@ -24,4 +24,6 @@ public interface StudySessionRepository extends JpaRepository<StudySession, Long
 
     // 전체 기록 찾기
     List<StudySession> findByUserOrderByStartedAtDesc(User user);
+
+    void deleteByUser(User user);
 }
