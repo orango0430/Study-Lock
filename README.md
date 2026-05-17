@@ -6,16 +6,19 @@
 - **Backend** : Spring Boot (Java 17), Spring Security, JWT, JPA
 - **Database** : Supabase (PostgreSQL)
 - **Frontend** : React Native + Expo
+- **Deployment** : Docker + Railway
 
 ## 사용한 오픈소스
-| 오픈소스 | 용도 |
-|---|---|
-| Spring Boot | REST API 서버 |
-| Spring Security + JWT | 인증/보안 |
-| JPA/Hibernate | DB 연동 |
-| Supabase | 데이터 저장 |
-| React Native | 크로스플랫폼 앱 |
-| Axios | API 통신 |
+| 오픈소스                  | 용도           |
+|-----------------------|--------------|
+| Spring Boot           | REST API 서버  |
+| Spring Security + JWT | 인증/보안        |
+| JPA/Hibernate         | DB 연동        |
+| Supabase              | 데이터 저장       |
+| React Native          | 크로스플랫폼 앱     |
+| Axios                 | API 통신       |
+| Docker                | 컨테이너 배포      |
+| Railway               | 클라우드 배포 플랫폼 |
 
 ## API
 | 메서드 | URL | 설명 |
