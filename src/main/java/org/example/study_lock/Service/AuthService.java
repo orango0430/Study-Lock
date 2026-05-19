@@ -67,5 +67,26 @@ public class AuthService {
         userRepository.save(user);
 
     }
+    // Refresh Token 재발급
+    public LoginResponse refresh(String refreshToken) {
+        // refreshToken으로 유저 찾기
+        User user = userRepository.findByRefreshToken(refreshToken)
+                .orElseThrow(() -> new RuntimeException("유효하지 않은 refresh token입니다"));
+
+        // refreshToken 유효성 검증
+        if (!jwtUtil.validateToken(refreshToken)) {
+            throw new RuntimeException("만료된 refresh token입니다");
+        }
+
+        // 새 토큰 발급
+        String newAccessToken = jwtUtil.generateAccessToken(user.getEmail());
+        String newRefreshToken = jwtUtil.generateRefreshToken(user.getEmail());
+
+        // 새 refreshToken DB 저장
+        user.setRefreshToken(newRefreshToken);
+        userRepository.save(user);
+
+        return new LoginResponse(newAccessToken, newRefreshToken);
+    }
 
 }
