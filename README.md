@@ -21,16 +21,17 @@
 | Railway               | 클라우드 배포 플랫폼 |
 
 ## API
-| 메서드 | URL | 설명 |
-|---|---|---|
-| POST | `/api/auth/signup` | 회원가입 |
-| POST | `/api/auth/login` | 로그인 |
-| POST | `/api/study/start` | 공부 시작 |
-| POST | `/api/study/end` | 공부 종료 |
-| POST | `/api/study/escape` | 이탈 감지 |
-| GET | `/api/records/today` | 오늘 기록 |
-| GET | `/api/records` | 전체 기록 |
-| GET | `/api/stats/weekly` | 주간 통계 |
-| GET | `/api/stats/subject` | 과목별 통계 |
-| GET | `/api/user/me` | 내 정보 |
-| DELETE | `/api/user/me` | 회원 탈퇴 |
+| 메서드    | URL                  | 설명 |
+|--------|----------------------|---|
+| POST   | `/api/auth/signup`   | 회원가입 |
+| POST   | `/api/auth/login`    | 로그인 |
+| POST   | `/api/auth/logout`   | 로그아웃|
+| POST   | `/api/study/start`   | 공부 시작 |
+| POST   | `/api/study/end`     | 공부 종료 |
+| POST   | `/api/study/escape`  | 이탈 감지 |
+| GET    | `/api/records/today` | 오늘 기록 |
+| GET    | `/api/records`       | 전체 기록 |
+| GET    | `/api/stats/weekly`  | 주간 통계 |
+| GET    | `/api/stats/subject` | 과목별 통계 |
+| GET    | `/api/user/me`       | 내 정보 |
+| DELETE | `/api/user/me`       | 회원 탈퇴 |
