@@ -28,4 +28,12 @@ public class AuthController {
         LoginResponse response = authService.login(request);
         return ResponseEntity.ok(response);
     }
+    // 로그아웃
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(
+            @RequestHeader("Authorization") String token) {
+        String accessToken = token.replace("Bearer ", "");
+        authService.logout(accessToken);
+        return ResponseEntity.ok("로그아웃 성공");
+    }
 }
