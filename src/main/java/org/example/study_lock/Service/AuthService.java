@@ -49,6 +49,23 @@ public class AuthService {
         String accessToken = jwtUtil.generateAccessToken(user.getEmail());
         String refreshToken = jwtUtil.generateRefreshToken(user.getEmail());
 
+        // refreshToken DB에 저장
+        user.setRefreshToken(refreshToken);
+        userRepository.save(user);
+
         return new LoginResponse(accessToken, refreshToken);
+
     }
+    // 로그아웃
+    public void logout(String token){
+        String email = jwtUtil.getEmailFromToken(token);
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("유저를 찾을 수 없습니다"));
+
+        // refreshToken DB에서 삭제
+        user.setRefreshToken(null);
+        userRepository.save(user);
+
+    }
+
 }
